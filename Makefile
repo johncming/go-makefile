@@ -4,7 +4,6 @@ REGISTRY?=gcr.io/images
 COMMIT_SHA=$(shell git rev-parse --short HEAD)
 
 
-
 .PHONY: build
 ## build: build the application
 build: clean
@@ -19,8 +18,8 @@ run:
 .PHONY: clean
 ## clean: cleans the binary
 clean:
-    @echo "Cleaning"
-    @go clean
+	@echo "Cleaning"
+	go clean
 
 .PHONY: test
 ## test: runs go test with default values
